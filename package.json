@@ -1,0 +1,30 @@
+{
+  "name": "vehicles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.0",
+    "@types/node": "^20.10.6",
+    "@types/ws": "^8.5.10",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.2",
+    "@types/express": "^4.17.21",
+    "express": "^4.17",
+    "prettier": "^3.1.1"
+  }
+}

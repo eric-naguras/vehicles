@@ -1,0 +1,45 @@
+
+############################################################
+
+GET http://localhost:3000/status/vehicles/data_3?start=1702647696000&end=1704342984000 HTTP/1.1
+
+############################################################
+# vehicleId missing
+GET http://localhost:3000/status/vehicles?start=1704340930000&end=1704342984000 HTTP/1.1
+
+############################################################
+# no start date
+GET http://localhost:3000/status/vehicles/123?&end=1704342984000 HTTP/1.1
+
+############################################################
+# no end date
+GET http://localhost:3000/status/vehicles/123?&start=1704342984000 HTTP/1.1
+
+############################################################
+# no dates at all
+GET http://localhost:3000/status/vehicles/123 HTTP/1.1
+
+############################################################
+# illegal start date
+GET http://localhost:3000/status/vehicles/123?&start=notadate&end=1704342984000 HTTP/1.1
+
+############################################################
+# illegal end date
+GET http://localhost:3000/status/vehicles/123?&start=1704342984000&end=notvalid HTTP/1.1
+
+############################################################
+# both dates wrong format
+GET http://localhost:3000/status/vehicles/123?&start=notvalid&end=notvalid HTTP/1.1
+
+############################################################
+# start date GT end date
+GET http://localhost:3000/status/vehicles/123?start=1704342984000&end=1704340930000 HTTP/1.1
+
+#############################################
+
+
+############################################################
+
+GET https://vehicles-naguras.fly.dev/status/vehicles/123?start=1704340930000&end=1704342984000 HTTP/1.1
+content-type: application/json
+
