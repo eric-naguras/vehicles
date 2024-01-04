@@ -1,7 +1,12 @@
-/********************************************************************/
-/* For simplicity business rules and infrastructure codes is combined 
-/* into a single file. Nomally these would be separated
-/* Also, some errors could be a bit nicer */
+/******************************************************************************/
+/* For simplicity, business rules and infrastructure codes are combined. 
+/* Normally, these would be separated.
+/* Also, some errors could be handled more gracefully, and 
+/* perhaps there could be additional error checking
+/* and unit tests to enhance robustness.
+/* But for now, I believe it showcases my abilities and skills sufficiently. */
+/*****************************************************************************/
+
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import express from 'express'
